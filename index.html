@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Primary Meta Tags -->
+    <meta name="title" content="Nhật Ký Đà Lạt 3N2Đ Trọn Gói 2.73Tr/Người — Phú Trần Travels">
+    <meta name="description" content="Lịch trình du lịch Đà Lạt tự túc chi tiết từng giờ, săn mây Cầu Đất 4:00 sáng, nướng Xóm Lèo, chill Chênh Vênh & Miền Du Mục với ngân sách 2.73tr/người.">
+    <meta name="keywords" content="Phú Trần Travels, Du lịch Đà Lạt, Lịch trình Đà Lạt 3N2Đ, Săn mây Cầu Đất, An Mai Boutique, Pink Valley, Xóm Lèo, Chênh Vênh Coffee">
+    <meta name="author" content="Trần Trọng Phú">
+
+    <!-- Open Graph / Facebook / Zalo Meta Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://dalat.tranphu.cyou/">
+    <meta property="og:title" content="🌲 CHUYẾN ĐI ĐÀ LẠT 3N2Đ TRỌN GÓI CHỈ 2.73TR/NGƯỜI ☁️">
+    <meta property="og:description" content="Lịch trình tự túc từng giờ, săn mây Đồi chè Cầu Đất, nướng Xóm Lèo, chill Chênh Vênh & Miền Du Mục. Bấm xem chi tiết & nhận sơ đồ chỉ đường!">
+    <meta property="og:image" content="images/1785856050183_2224797881829335097_2419330006741937226_ab2ac77dbd5a8fef56a13189b1406e96.jpg">
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Nhật Ký Đà Lạt 3N2Đ Trọn Gói 2.73Tr/Người — Phú Trần Travels">
+    <meta name="twitter:description" content="Lịch trình tự túc từng giờ, săn mây Đồi chè Cầu Đất, nướng Xóm Lèo, chill Chênh Vênh.">
+    <meta name="twitter:image" content="images/1785856050183_2224797881829335097_2419330006741937226_ab2ac77dbd5a8fef56a13189b1406e96.jpg">
+
+    <title>Phú Trần Travels - Nhật Ký Hành Trình Du Lịch Đà Lạt 3N2Đ</title>
+
+    <!-- Inline Theme Initializer -->
+    <script>
+        (function() {
+            var savedTheme = localStorage.getItem('travel_theme');
+            if (savedTheme === 'light' || (!savedTheme && window.matchMedia('(prefers-color-scheme: light)').matches)) {
+                document.documentElement.classList.add('light-theme');
+            } else {
+                document.documentElement.classList.add('dark-theme');
+            }
+        })();
+    </script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800;900&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Background Ambient Blobs -->
+    <div class="travel-bg-grid"></div>
+    <div class="blob blob-pine"></div>
+    <div class="blob blob-amber"></div>
+
+    <!-- Navigation Header -->
+    <header id="travel-navbar" class="glass-header">
+        <div class="header-container">
+            <a href="#" class="brand-logo">
+                <i class="fa-solid fa-compass brand-icon"></i> PhúTrần<span>Travels</span>
+            </a>
+            
+            <nav class="destination-nav" id="destination-nav">
+                <!-- Dynamic Destination Tabs rendered via JS -->
+            </nav>
+
+            <div class="header-actions">
+                <button id="theme-toggle" class="theme-toggle-btn" aria-label="Đổi giao diện Sáng/Tối">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-travel-wrapper">
+        <!-- Dynamic Personalized Invitation Banner (Trình tạo link rủ bạn đi cùng) -->
+        <div id="personalized-banner" class="personalized-banner-wrapper container" style="display: none;">
+            <div class="personalized-card glass-card">
+                <i class="fa-solid fa-envelope-open-text invite-icon"></i>
+                <div class="invite-content">
+                    <span class="invite-subtitle">💌 LỜI MỜI DU LỊCH ĐẶC BIỆT</span>
+                    <h3 id="personalized-text" class="invite-title">Đi Đà Lạt 3N2Đ với mình nhé! 🌲☁️</h3>
+                    <p>Khám phá lịch trình săn mây Cầu Đất, nướng Xóm Lèo & ngắm hoàng hôn đồi thông cực chill.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Hero Destination Banner -->
+        <section id="hero-banner" class="hero-travel-section">
+            <div class="container">
+                <div class="hero-card glass-card">
+                    <div class="hero-badge-strip">
+                        <span class="active-badge"><i class="fa-solid fa-fire"></i> REVIEW VIRAL FB & TIKTOK</span>
+                        <span class="dates-pill"><i class="fa-solid fa-calendar-days"></i> 26/07 - 28/07/2026</span>
+                    </div>
+
+                    <h1 class="hero-main-title">Hành Trình Khám Phá Đà Lạt <br><span class="highlight-text">3 Ngày 2 Đêm Thơ Mộng</span></h1>
+                    <p class="hero-description">
+                        Lịch trình tự túc chi tiết theo từng khung giờ, săn mây Đồi chè Cầu Đất 4:00 sáng, thưởng thức nướng thung lũng Xóm Lèo, chill hoàng hôn Chênh Vênh & Miền Du Mục với tổng chi phí tối ưu <strong>2.730.000 đ / người</strong>.
+                    </p>
+
+                    <!-- Key Stats Row -->
+                    <div class="stats-row">
+                        <div class="stat-box">
+                            <i class="fa-solid fa-clock icon-green"></i>
+                            <div class="stat-info">
+                                <strong>3N2Đ</strong>
+                                <span>Thời Gian Chuyến Đi</span>
+                            </div>
+                        </div>
+                        <div class="stat-box">
+                            <i class="fa-solid fa-route icon-gold"></i>
+                            <div class="stat-info">
+                                <strong>~160 km</strong>
+                                <span>Tổng Quãng Đường</span>
+                            </div>
+                        </div>
+                        <div class="stat-box">
+                            <i class="fa-solid fa-wallet icon-cyan"></i>
+                            <div class="stat-info">
+                                <strong>2.730.000 đ</strong>
+                                <span>Chi Phí / Người</span>
+                            </div>
+                        </div>
+                        <div class="stat-box">
+                            <i class="fa-solid fa-bed icon-purple"></i>
+                            <div class="stat-info">
+                                <strong>An Mai Boutique</strong>
+                                <span>11A Lữ Gia, P.9</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- VIRAL SHARE & RỦ BẠN ĐI CÙNG WIDGET -->
+        <section id="viral-tools-section" class="travel-section" style="padding-top: 0;">
+            <div class="container grid-viral-tools">
+                <!-- 1. Personalized Share Link Generator -->
+                <div class="viral-card glass-card">
+                    <h3><i class="fa-solid fa-user-plus icon-green"></i> Tạo Link Rủ Bạn Đi Cùng</h3>
+                    <p class="text-muted">Nhập tên bạn bè/người yêu để tạo link cá nhân hóa gửi qua Messenger/Zalo:</p>
+                    <div class="share-input-group">
+                        <input type="text" id="friend-name-input" placeholder="Ví dụ: Hoàng Lan, Tuấn, Trang..." aria-label="Tên bạn bè">
+                        <button id="btn-generate-link" class="btn-viral btn-pine"><i class="fa-solid fa-link"></i> Tạo & Copy Link</button>
+                    </div>
+                </div>
+
+                <!-- 2. One-Click Copy Review Caption for FB/TikTok -->
+                <div class="viral-card glass-card">
+                    <h3><i class="fa-solid fa-share-nodes icon-gold"></i> Chia Sẻ Bài Review Nhanh</h3>
+                    <p class="text-muted">Copy ngay đoạn tóm tắt bài review đã format kèm emoji để đăng Facebook / TikTok:</p>
+                    <button id="btn-copy-caption" class="btn-viral btn-amber btn-block"><i class="fa-solid fa-copy"></i> Sao Chép Caption Đăng Bài FB / TikTok</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- VIRAL TRAVEL RECEIPT CARD (Hóa đơn du lịch Đà Lạt Vintage) -->
+        <section id="receipt-section" class="travel-section" style="padding-top: 0;">
+            <div class="container">
+                <div class="receipt-wrapper glass-card">
+                    <div class="receipt-header">
+                        <div class="receipt-logo"><i class="fa-solid fa-plane-departure"></i> DALAT TRAVEL RECEIPT</div>
+                        <span class="receipt-stamp">VERIFIED 3N2Đ</span>
+                    </div>
+                    <div class="receipt-body">
+                        <div class="r-row"><span>HÀNH KHÁCH:</span> <strong>Trần Trọng Phú & Bạn Đồng Hành</strong></div>
+                        <div class="r-row"><span>ĐIỂM ĐẾN:</span> <strong>Đà Lạt (Lữ Gia, Cầu Đất, Vạn Thành, P.11, P.12)</strong></div>
+                        <div class="r-row"><span>THỜI GIAN:</span> <strong>3 Ngày 2 Đêm (26/07 - 28/07/2026)</strong></div>
+                        <hr class="r-divider">
+                        <div class="r-row"><span>Cố Định (Xe + Khách Sạn):</span> <span>2.517.000 đ</span></div>
+                        <div class="r-row"><span>Tự Túc Ngày 1 (Pink Valley, Xóm Lèo, BBQ):</span> <span>1.400.000 đ</span></div>
+                        <div class="r-row"><span>Tự Túc Ngày 2 (Săn mây Cầu Đất, Euro Garden, Chênh Vênh):</span> <span>690.000 đ</span></div>
+                        <div class="r-row"><span>Tự Túc Ngày 3 (Miền Du Mục, Bánh ướt lòng gà, Quà):</span> <span>1.080.000 đ</span></div>
+                        <hr class="r-divider">
+                        <div class="r-row r-total">
+                            <span>TỔNG CHUYẾN ĐI (2 NGƯỜI):</span>
+                            <span class="total-price">5.460.000 đ</span>
+                        </div>
+                        <div class="r-row r-subtotal">
+                            <span>ƯỚC TÍNH BÌNH QUÂN / NGƯỜI:</span>
+                            <span class="per-person-price">2.730.000 đ / người</span>
+                        </div>
+                    </div>
+                    <div class="receipt-footer">
+                        <div class="barcode-strip">
+                            <span>||| | ||||| || |||||| | ||| ||||||| |||</span>
+                            <small>CODE: DALAT-2026-TTP</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Itinerary Timeline Section -->
+        <section id="itinerary-section" class="travel-section">
+            <div class="container">
+                <div class="section-title-wrapper">
+                    <h2><i class="fa-solid fa-map-location-dot"></i> Lịch Trình Chi Tiết Theo Ngày</h2>
+                    <p>Bấm chọn từng ngày để xem lịch trình các điểm đến và mở Google Maps chỉ đường</p>
+                </div>
+
+                <!-- Day Selector Tabs -->
+                <div class="day-tabs-container">
+                    <button class="day-tab-btn active" data-day="1">
+                        <span class="day-num">NGÀY 1</span>
+                        <span class="day-date">26/07 (Chủ Nhật)</span>
+                    </button>
+                    <button class="day-tab-btn" data-day="2">
+                        <span class="day-num">NGÀY 2</span>
+                        <span class="day-date">27/07 (Thứ Hai)</span>
+                    </button>
+                    <button class="day-tab-btn" data-day="3">
+                        <span class="day-num">NGÀY 3</span>
+                        <span class="day-date">28/07 (Thứ Ba)</span>
+                    </button>
+                    <button class="day-tab-btn" data-day="maps">
+                        <span class="day-num"><i class="fa-solid fa-map"></i> SƠ ĐỒ</span>
+                        <span class="day-date">Xem Sơ Đồ Tuyến Đường</span>
+                    </button>
+                </div>
+
+                <!-- Timeline Render Container -->
+                <div id="timeline-render-container" class="timeline-render-container">
+                    <!-- Dynamic timeline items rendered via JS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Budget & Expense Section -->
+        <section id="budget-section" class="travel-section section-alt">
+            <div class="container">
+                <div class="section-title-wrapper">
+                    <h2><i class="fa-solid fa-calculator"></i> Bảng Kinh Phí & Chi Phí Thực Tế</h2>
+                    <p>Phân bóc chi tiết khoản mục cố định & chi phí tự túc (Ước tính cho 2 người)</p>
+                </div>
+
+                <!-- Budget Overview Cards Grid -->
+                <div class="budget-summary-grid">
+                    <div class="budget-summary-card glass-card">
+                        <span class="b-label">Tổng Chi Phí Chuyến Đi (2 Người)</span>
+                        <h3 class="b-value gradient-green">5.460.000 đ</h3>
+                        <p class="b-sub">Đã bao gồm toàn bộ xe, KS, ăn uống & vé tham quan</p>
+                    </div>
+                    <div class="budget-summary-card glass-card">
+                        <span class="b-label">Ước Tính Bình Quân / Người</span>
+                        <h3 class="b-value gradient-gold">2.730.000 đ</h3>
+                        <p class="b-sub">Chi phí trọn gói cho chuyến đi 3N2Đ thoải mái</p>
+                    </div>
+                    <div class="budget-summary-card glass-card">
+                        <span class="b-label">Chi Phí Cố Định Đã Thanh Toán</span>
+                        <h3 class="b-value text-cyan">2.517.000 đ</h3>
+                        <p class="b-sub">Xe giường nằm khứ hồi (1.417k) + Khách sạn (1.1tr)</p>
+                    </div>
+                </div>
+
+                <!-- Expense Category Filter Buttons -->
+                <div class="expense-filters">
+                    <button class="expense-filter-btn active" data-filter="all"><i class="fa-solid fa-border-all"></i> Tất Cả Khoản Mục</button>
+                    <button class="expense-filter-btn" data-filter="fixed"><i class="fa-solid fa-lock"></i> Cố Định (Xe & KS)</button>
+                    <button class="expense-filter-btn" data-filter="food"><i class="fa-solid fa-utensils"></i> Ăn Uống & Cafe</button>
+                    <button class="expense-filter-btn" data-filter="sightseeing"><i class="fa-solid fa-ticket"></i> Vé Tham Quan</button>
+                    <button class="expense-filter-btn" data-filter="transport"><i class="fa-solid fa-motorcycle"></i> Đi Lai & Xăng Xe</button>
+                </div>
+
+                <!-- Expense Items Table / List -->
+                <div id="expense-list-container" class="expense-list-container glass-card">
+                    <!-- Dynamic expense items rendered via JS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Media Photo & Video Gallery Section -->
+        <section id="gallery-section" class="travel-section">
+            <div class="container">
+                <div class="section-header-flex">
+                    <div class="section-title-wrapper text-left">
+                        <h2><i class="fa-solid fa-camera-retro"></i> Album Hình Ảnh & Video Kỷ Niệm</h2>
+                        <p>41 hình ảnh & video thực tế chụp lại khoảnh khắc săn mây, ngắm thung lũng & ẩm thực Đà Lạt</p>
+                    </div>
+                </div>
+
+                <!-- Gallery Masonry Grid -->
+                <div id="gallery-grid" class="gallery-grid">
+                    <!-- Dynamic images and videos rendered via JS -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Lightbox Media Viewer Modal -->
+    <div id="lightbox-modal" class="lightbox-overlay" aria-hidden="true">
+        <div class="lightbox-container">
+            <button class="lightbox-close-btn" aria-label="Đóng hình ảnh"><i class="fa-solid fa-xmark"></i></button>
+            <div id="lightbox-media-wrapper" class="lightbox-media-wrapper">
+                <!-- Image or Video injected via JS -->
+            </div>
+            <div class="lightbox-caption">
+                <p id="lightbox-caption-text"></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="back-to-top-btn" aria-label="Trở về đầu trang">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast">Đã sao chép vào bộ nhớ tạm!</div>
+
+    <!-- Footer -->
+    <footer class="travel-footer">
+        <div class="container footer-flex">
+            <p>&copy; 2026 Phú Trần Travels. Nhật ký hành trình du lịch tự túc.</p>
+            <div class="footer-links">
+                <span>Đà Lạt 2026</span> •
+                <span>Phan Thiết (Sắp ra mắt)</span> •
+                <span>Măng Đen (Sắp ra mắt)</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
